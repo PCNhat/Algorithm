@@ -80,10 +80,14 @@ function getTotalDaysUpToCurrentMonth(int $month, int $year): int
 
 // Main
 
-$day = 8;
-$month = 10;
-$year = 412;
+$day = 14;
+$month = 9;
+$year = 2021;
 
 $totalLeapYears = totalLeapYears($year);
 
-echo $day + getTotalDaysUpToCurrentMonth($month, $year) + ($totalLeapYears * 366) +  (($year - 1 - $totalLeapYears) * 365);
+echo "Days: " . $day . "\n"; 
+echo "Days up to month: " . getTotalDaysUpToCurrentMonth($month, $year) . "\n";
+echo "Total leap years: " . $totalLeapYears . "\n";
+
+echo "Total days: " . ($day + getTotalDaysUpToCurrentMonth($month, $year) + ($totalLeapYears * 366) +  (($year - 1 - $totalLeapYears) * 365)) . "\n";
