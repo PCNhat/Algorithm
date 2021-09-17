@@ -79,10 +79,12 @@ function getTotalDaysUpToCurrentMonth(int $month, int $year): int
 }
 
 // Main
-
-$day = 14;
-$month = 9;
-$year = 2021;
+echo "Nhap ngay: ";
+$day = (int)fgets(fopen('php://stdin', 'r'));
+echo "Nhap thang: ";
+$month = (int)fgets(fopen('php://stdin', 'r'));
+echo "Nhap nam: ";
+$year = (int)fgets(fopen('php://stdin', 'r'));
 
 $totalLeapYears = totalLeapYears($year);
 
